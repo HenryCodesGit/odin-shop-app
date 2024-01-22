@@ -25,7 +25,7 @@ function App() {
           <button type="submit" aria-label="Go"></button>
       </form>
     </header>
-    <nav>Shop links here</nav>
+    <nav></nav>
     <main>Items for shop go in here</main>
     <footer>© 2024 The Odin Project. All rights reserved.</footer>
   </>);

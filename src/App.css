@@ -28,6 +28,10 @@ table { border-collapse: collapse; border-spacing: 0;}
   --logo-size: 1.5rem;
 }
 
+html{
+  min-width: 350px;   /* Required to prevent horrible wrapping below 350px */
+}
+
 header {
   /* Lay all children horizontally and push them to edges */
   display: flex;
@@ -129,29 +133,8 @@ header {
 
 
 /* ******************************************************************************************************/
-/* Mobile styling */
-
-@media  (max-width: 854px) {
-
-  html{
-    min-width: 350px;   /* Required to prevent horrible wrapping below 350px */
-  }
-}
-
-/* ******************************************************************************************************/
-/* Tablet styling */
-@media  (min-width: 854px) and (max-width: 1036px)  {
-
-  html{
-    min-width: 350px;   /* Required to prevent horrible wrapping below 350px */
-  }
-
-}
-
-/* ******************************************************************************************************/
 /* Tablet and desktop styling */
 @media  (min-width: 854px) {
-
   /* At this point, the search bar should have stopped wrapping. So change order back to what it was */
   .nav-right{
     order: 1;
