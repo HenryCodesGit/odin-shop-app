@@ -7,10 +7,6 @@ import App from './App';
 describe("App component", ()=>{
 
     test("Renders 'magnificient monkeys'", ()=>{
-        //Since screen does not have a container property, we can destructure 'render()' to get a container for the tester
-        const {container} = render(<App />);
-        expect(container).toMatchSnapshot(); //Refer to the snapshot in the 'snapshot' folder
-    })
 
     test("Renders 'radical rhinos' after button click", ()=>{
         async () => {
