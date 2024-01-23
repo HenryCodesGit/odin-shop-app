@@ -25,7 +25,29 @@ function App() {
           <button type="submit" aria-label="Go"></button>
       </form>
     </header>
-    <nav></nav>
+    <nav><ul>
+      <li><a>**ALL**</a></li>
+      <li><a>ItemA</a></li>
+      <li><a>ItemA</a></li>
+      <li><a>ItemA</a></li>
+      <li><a>ItemA</a></li>
+      <li><a>ItemA</a></li>
+      <li><a>ItemA</a></li>
+      <li><a>ItemA</a></li>
+      <li><a>ItemA</a></li>
+      <li><a>ItemA</a></li>
+      <li><a>ItemA</a></li>
+      <li><a>ItemA</a></li>
+      <li><a>ItemA</a></li>
+      <li><a>ItemA</a></li>
+      <li><a>ItemA</a></li>
+      <li><a>ItemA</a></li>
+      <li><a>ItemA</a></li>
+      <li><a>ItemA</a></li>
+      <li><a>ItemA</a></li>
+      <li><a>ItemA</a></li>
+      <li><a>ItemA</a></li>
+    </ul></nav>
     <main>Items for shop go in here</main>
     <footer>© 2024 The Odin Project. All rights reserved.</footer>
   </>);
