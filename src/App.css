@@ -35,6 +35,9 @@ table { border-collapse: collapse; border-spacing: 0;}
   height: 100vh;
   display: flex;
   flex-direction: column;
+
+  margin-left: auto;
+  margin-right: auto;
 }
 
 header {
@@ -142,10 +145,10 @@ nav {
 
   & ul{
     display: flex; 
-    overflow-x: scroll;
+    overflow-x: auto;
     padding: var(--large-spacing);
   
-    > * {
+    & > * {
       margin: var(--small-spacing);
       color: #eee
     }
@@ -153,35 +156,15 @@ nav {
 }
 
 main {
-  border: 1px solid blue;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
 }
 
 footer {
-  flex: initial;
 }
 /* ******************************************************************************************************/
 /* Tablet and desktop styling */
 @media  (min-width: 854px) {
-  /* At this point, the search bar should have stopped wrapping. So change order back to what it was */
-  .nav-right{
-    order: 1;
-  }
 }
 
 /*desktop styling */
 @media  (min-width: 1036px){
-
-  /* Unhiding user/cart button text */
-  header .nav-right {
-    & .user-account, & .cart{
-      & .text {
-        display:flex;
-        align-items: center;
-      }
-    }
-  }
-
 }

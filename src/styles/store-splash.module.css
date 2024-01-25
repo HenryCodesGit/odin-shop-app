@@ -1,0 +1,66 @@
+.splashContainer{
+    flex: 1;
+    border: 1px solid red;
+  
+    display: flex;
+
+    & .splashImage{
+      background-image: url('../assets/img/bg.jpg');
+      background-size: cover;
+      background-position-x: 50%;
+      background-position-y: 100%;
+  
+      filter: blur(3px);
+      -webkit-filter: blur(3px);
+  
+      flex: 1;
+      border: 1px solid green;
+    }
+  
+    & .splashSubmit{
+      position:fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+  
+      border: 1px solid green;
+      background-color: #2229;
+      color: #FFF8;
+      display: grid;
+      grid-template: auto auto / auto auto;
+      grid-template-areas:
+        " title entry"
+        " slogan entry";
+  
+      .title{
+        grid-area: title;
+      }
+  
+      .slogan{
+        grid-area: slogan;
+      }
+  
+      .entry{
+        grid-area: entry;
+
+        background-color: grey;
+        text-decoration: none;
+        color: #FFF8;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  
+  
+  
+  /* ******************************************************************************************************/
+  /* Tablet and desktop styling */
+  @media  (min-width: 854px) {
+  }
+  
+  /*desktop styling */
+  @media  (min-width: 1036px){
+  }
