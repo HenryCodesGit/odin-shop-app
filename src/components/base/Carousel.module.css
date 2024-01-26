@@ -1,0 +1,54 @@
+.productCarousel {
+    flex: 1;
+    border: 5px solid pink;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    overflow-y: auto;
+    overflow-x: auto;
+    flex-wrap: wrap;
+
+    & .productContainer{
+      flex: 1;
+      max-width: 300px;
+      border: 1px solid green;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      & .productCard{
+        border: 1px solid red;
+        flex: 1;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+  
+        & .productImage{
+          max-width: 16rem;
+          border: 1px solid blue;
+        }
+
+        & .productPrice{
+          text-align: center;
+        }
+
+        & .productRating{
+          text-align: end;
+        }
+        
+
+
+        /*
+
+          <img className="product-image" src={temp} />
+          <div className="product-price">$58.95</div>
+          <div className="product-name">Noma Caddy Reel with 25ft Cord and Power Bar</div>
+          <div className="product-rating">★★★★☆ <span>(103 Ratings)</span></div>
+
+        */
+      }
+    }
+}

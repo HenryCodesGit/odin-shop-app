@@ -3,15 +3,22 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App.jsx";
-import Store from "./components/pages/store-front.jsx"
+import Store from "./components/pages/store.jsx"
+import Carousel from "./components/base/Carousel.jsx";
+import Cart from "./components/base/ShoppingCart.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
   },
-  { path: "store-front", 
-    element: <Store /> 
+  { path: "store", 
+    element: <Store /> ,
+    children: [
+      {index: true, element: <Carousel />},
+      {path: "product-page", element: <Carousel />},
+      {path: "cart", element: <Cart />}
+    ]
   }
 ])
 

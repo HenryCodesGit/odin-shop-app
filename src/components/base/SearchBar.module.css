@@ -1,0 +1,19 @@
+.searchForm {
+    flex: 1;
+    height: var(--header-size);
+
+    min-width: 60%; /* Needed for proper flex-wrap behaviour */
+    display: flex;
+
+    & .searchText{
+      flex: 1;
+    }
+
+    & button {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 1.5rem;
+      width: 3rem;
+    }
+    
+}

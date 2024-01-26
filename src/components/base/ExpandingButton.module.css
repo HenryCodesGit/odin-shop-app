@@ -1,0 +1,30 @@
+.expandingButton {
+    min-width: calc(2*var(--logo-size));
+    display: flex;
+    justify-content: center;
+
+    text-decoration: none;
+}
+
+.icon {
+    flex: 1;
+    height: 100%;
+    width: var(--logo-size);
+    /*background-image: url('../assets/icons/profile-user.png');*/
+    background-size: var(--logo-size);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+.text{
+    height: 100%;
+    display: none;
+}
+
+/*desktop styling */
+@media  (min-width: 1080px){                              
+    .text {
+        display:flex;
+        align-items: center;
+    }
+}

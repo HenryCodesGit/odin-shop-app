@@ -1,39 +1,5 @@
-/* TODO: Break up this css into module css' for each component */
-
-/* ******************************************************************************************************/
-/* CSS Reset */
-
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video { margin: 0; padding: 0; border: 0; vertical-align: baseline;}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display: block;}
-body { line-height: 1;}
-ol,ul { list-style: none;}
-blockquote,q { quotes: none;}
-blockquote:before,blockquote:after,q:before,q:after { content: ''; content: none;}
-table { border-collapse: collapse; border-spacing: 0;}
-
-/* ******************************************************************************************************/
-/* Universal styling */
-
-@font-face {
-  font-family: 'Fredoka';
-  src: url('./assets/fonts/Fredoka-VariableFont.ttf') format('opentype');
-}
-
-* {
-  box-sizing: border-box;
-}
-
-:root{
-  --small-spacing: 0.25rem;
-  --large-spacing: 0.5rem;
-  --header-size: 3rem;
-  --logo-size: 1.5rem;
-  --theme-color: rgb(140, 80, 40);
-}
-
-#root {
-  min-width: 350px;   /* Required to prevent horrible wrapping and layout breaking below 350px */
-  border: 4px solid blue;
+:root {
+  min-width: 360px;   /* Required to prevent needing another media query for tiny screens 360px */
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -43,185 +9,13 @@ table { border-collapse: collapse; border-spacing: 0;}
   margin-right: auto;
 }
 
-header {
-  /* Lay all children horizontally and push them to edges */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  & .navLogo {
-    & .navLogoLinks{ 
-      /* Keep child items left justified and arranged horizontally */
-      display: flex;
-      justify-content: left;
-      align-items: center;
-
-      /* Remove standard blue/purple highlight and underline */
-      text-decoration: none;
-      color: inherit;
-
-      & .navLogoIcon{
-        /* Height of header defined by icon size */
-        height: var(--header-size);
-        aspect-ratio: 1;
-
-        /*Icon url and tiling */
-        background-image: url('../assets/icons/vegetables.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-
-      /*Logo font styling*/
-      & .navLogoText{
-        font-family: 'Fredoka', Arial, Helvetica, sans-serif;
-        font-weight: 600;
-        font-size: 1.5rem;
-        color: var(--theme-color);
-      }
-    }
-  }
-  
-  & .searchForm {
-    height: var(--header-size);
-    flex: 1;
-    min-width: 60%; /* Needed for proper flex-wrap behaviour */
-
-    display: flex;
-
-    & .searchText{
-      flex: 1;
-    }
-
-    & button {
-      background-image: url('../assets/icons/magnifier.png');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 1.5rem;
-      width: 3rem;
-    }
-    
-  }
-  
-  .navRight{
-    border: 1px solid red;
-    display: flex; /* not sure why but this aligns the button horizontally*/
-
-    & .userAccount, & .cart{
-      min-width: calc(2*var(--logo-size));
-      display: flex;
-      justify-content: center;
-
-      & .icon {
-        flex: 1;
-        height: 100%;
-        width: var(--logo-size);
-        background-size: var(--logo-size);
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-
-      & .text{
-        height: 100%;
-        display: none;
-      }
-
-    }
-
-    & .userAccount{
-      & .icon {
-        background-image: url('../assets/icons/profile-user.png');
-      }
-      
-    }
-
-    & .cart{
-      & .icon {
-        background-image: url('../assets/icons/shopping-cart.png');
-      }
-    }
-  }
-}
-
-nav {
-
-  background-color: var(--theme-color);
-
-  & ul{
-    display: flex; 
-    overflow-x: auto;
-    padding: var(--large-spacing);
-  
-    & > * {
-      margin: var(--small-spacing);
-      color: #eee
-    }
-  }
-}
-
 main {
-  border: 1px solid blue;
   flex: 1;
 
   display: flex;
-  align-items: center;
+  align-items: start;
   flex-direction: column;
   overflow-y: hidden;
-
-  & .productCarousel {
-    flex: 1;
-    border: 5px solid pink;
-
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    overflow-y: auto;
-    overflow-x: auto;
-    flex-wrap: wrap;
-
-    & .productContainer{
-      flex: 1;
-      max-width: 300px;
-      border: 1px solid green;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-      & .productCard{
-        border: 1px solid red;
-        flex: 1;
-        
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-  
-        & .productImage{
-          max-width: 16rem;
-          border: 1px solid blue;
-        }
-
-        & .productPrice{
-          text-align: center;
-        }
-
-        & .productRating{
-          text-align: end;
-        }
-        
-
-
-        /*
-
-          <img className="product-image" src={temp} />
-          <div className="product-price">$58.95</div>
-          <div className="product-name">Noma Caddy Reel with 25ft Cord and Power Bar</div>
-          <div className="product-rating">★★★★☆ <span>(103 Ratings)</span></div>
-
-        */
-      }
-    }
-  }
-
 }
 
 footer {
@@ -229,24 +23,11 @@ footer {
 }
 /* ******************************************************************************************************/
 /* Tablet and desktop styling */
-@media  (min-width: 854px) {
-  /* At this point, the search bar should have stopped wrapping. So change order back to what it was */
-  .navRight{
-    order: 1;
-  }
+@media  (min-width: 880px) {
+
 }
 
 /*desktop styling */
-@media  (min-width: 1036px){
-
-  /* Unhiding user/cart button text */
-  header .navRight {
-    & .user-account, & .cart{
-      & .text {
-        display:flex;
-        align-items: center;
-      }
-    }
-  }
+@media  (min-width: 1080px){
 
 }

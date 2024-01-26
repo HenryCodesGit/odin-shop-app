@@ -1,12 +1,13 @@
-import "./App.css";
-
 import Splash from './components/pages/store-splash';
+import background from '/src/assets/img/bg.jpg'
+
+import '/src/styles/app.css'
 
 function App() {
 
   return (
   <>
-  <Splash />
+  <Splash linkTo="store/product-page" backgroundURL={background}/>
   </>);
 }
 

@@ -1,0 +1,14 @@
+.scrollNav {
+    background-color: var(--theme-color);
+}
+
+.list {
+    display: flex; 
+    overflow-x: auto;
+    padding: var(--large-spacing); 
+}
+
+.item {
+    margin: var(--small-spacing);
+    color: #eee;
+}

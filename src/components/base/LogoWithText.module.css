@@ -1,0 +1,30 @@
+& .navLogo {
+    & .navLogoLinks{ 
+      /* Keep child items left justified and arranged horizontally */
+      display: flex;
+      justify-content: left;
+      align-items: center;
+
+      /* Remove standard blue/purple highlight and underline */
+      text-decoration: none;
+      color: inherit;
+
+      & .navLogoIcon{
+        /* Height of header defined by icon size */
+        height: var(--header-size);
+        aspect-ratio: 1;
+
+        /*Icon url and tiling */
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      /*Logo font styling*/
+      & .navLogoText{
+        font-family: 'Fredoka', Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: var(--theme-color);
+      }
+    }
+  }

@@ -1,0 +1,22 @@
+.storeHeader {
+    /* Lay all children horizontally and push them to edges */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    .navRight{
+      display: flex;
+    }
+  }
+
+  @media  (min-width: 880px) {
+    /* For mobile screens, the search bar comes after (so that it can wrap). For desktop screen, put it in between the nav and logo */
+    .navRight{
+      order: 1;
+    }
+  }
+
+  /*desktop styling */
+@media  (min-width: 1080px){
+
+}
